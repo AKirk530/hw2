@@ -255,6 +255,67 @@ roles.movie_id = movies.where({title:"Batman Begins"})
 roles.person_id = people.where({person_id:"Gary Oldman"})[0]
 roles.save
 
+# The Dark Knight
+roles = roles.new
+roles.character_name = "Bruce Wayne"
+roles.movie_id = movies.where({title:"The Dark Knight"})
+roles.person_id = people.where({person_id:"Christian Bale"})[0]
+roles.save
+
+roles = roles.new
+roles.character_name = "Joker"
+roles.movie_id = movies.where({title:"The Dark Knight"})
+roles.person_id = people.where({person_id:"Heath Ledger"})[0]
+roles.save
+
+roles = roles.new
+roles.character_name = "Harvey Dent"
+roles.movie_id = movies.where({title:"The Dark Knight"})
+roles.person_id = people.where({person_id:"Aaron Eckhart"})[0]
+roles.save
+
+roles = roles.new
+roles.character_name = "Alfred"
+roles.movie_id = movies.where({title:"The Dark Knight"})
+roles.person_id = people.where({person_id:"Michael Caine"})[0]
+roles.save
+
+roles = roles.new
+roles.character_name = "Rachel Dawes"
+roles.movie_id = movies.where({title:"The Dark Knight"})
+roles.person_id = people.where({person_id:"Maggie Gyllenhaal"})[0]
+roles.save
+
+# The Dark Knight Rises
+roles = roles.new
+roles.character_name = "Bruce Wayne"
+roles.movie_id = movies.where({title:"The Dark Knight Rises"})
+roles.person_id = people.where({person_id:"Christian Bale"})[0]
+roles.save
+
+roles = roles.new
+roles.character_name = "Commissioner Gordon"
+roles.movie_id = movies.where({title:"The Dark Knight Rises"})
+roles.person_id = people.where({person_id:"Gary Oldman"})[0]
+roles.save
+
+roles = roles.new
+roles.character_name = "Bane"
+roles.movie_id = movies.where({title:"The Dark Knight Rises"})
+roles.person_id = people.where({person_id:"Tom Hardy"})[0]
+roles.save
+
+roles = roles.new
+roles.character_name = "John Blake"
+roles.movie_id = movies.where({title:"The Dark Knight Rises"})
+roles.person_id = people.where({person_id:"Joseph Gordon-Levitt"})[0]
+roles.save
+
+roles = roles.new
+roles.character_name = "Selina Kyle"
+roles.movie_id = movies.where({title:"The Dark Knight Rises"})
+roles.person_id = people.where({person_id:"Anne Hathaway"})[0]
+roles.save
 
 
 # Prints a header for the movies output
