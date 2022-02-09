@@ -224,6 +224,37 @@ movies.person_id = "Christopher Nolan"
 movies.save
 
 ## INSERT ROLE
+#Batman Begins
+roles = roles.new
+roles.character_name = "Bruce Wayne"
+roles.movie_id = movies.where({title:"Batman Begins"})
+roles.person_id = people.where({person_id:"Christian Bale"})[0]
+roles.save
+
+roles = roles.new
+roles.character_name = "Alfred"
+roles.movie_id = movies.where({title:"Batman Begins"})
+roles.person_id = people.where({person_id:"Michael Caine"})[0]
+roles.save
+
+roles = roles.new
+roles.character_name = "Ra's Al Ghul"
+roles.movie_id = movies.where({title:"Batman Begins"})
+roles.person_id = people.where({person_id:"Liam Neeson"})[0]
+roles.save
+
+roles = roles.new
+roles.character_name = "Rachel Dawes"
+roles.movie_id = movies.where({title:"Batman Begins"})
+roles.person_id = people.where({person_id:"Katie Holmes"})[0]
+roles.save
+
+roles = roles.new
+roles.character_name = "Commissioner Gordon"
+roles.movie_id = movies.where({title:"Batman Begins"})
+roles.person_id = people.where({person_id:"Gary Oldman"})[0]
+roles.save
+
 
 
 # Prints a header for the movies output
