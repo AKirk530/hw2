@@ -97,7 +97,7 @@ puts ""
 
 
 
-# SOLUTION
+# SOLUTION Alexander Kirk Hw#2
 
 # Delete existing data, so you'll start fresh each time this script is run.
 # Use `Model.destroy_all` code.
@@ -201,27 +201,30 @@ people.save
 puts people.all.count
 
 ## INSERT MOVIES
+puts movie.all.count
 
-movies = movies.new
-movies.title = "Batman Begins"
-movies.year_released = "2005"
-movies.rated = "PG-13"
-movies.person_id = "Christopher Nolan"
-movies.save
+movie = movies.new
+movie.title = "Batman Begins"
+movie.year_released = "2005"
+movie.rated = "PG-13"
+movie.person_id = "Christopher Nolan"
+movie.save
 
-movies = movies.new
-movies.title = "The Dark Knight"
-movies.year_released = "2008"
-movies.rated = "PG-13"
-movies.person_id = "Christopher Nolan"
-movies.save
+movie = movies.new
+movie.title = "The Dark Knight"
+movie.year_released = "2008"
+movie.rated = "PG-13"
+movie.person_id = "Christopher Nolan"
+movie.save
 
-movies = movies.new
-movies.title = "The Dark Knight Rises"
-movies.year_released = "2012"
-movies.rated = "PG-13"
-movies.person_id = "Christopher Nolan"
-movies.save
+movie = movies.new
+movie.title = "The Dark Knight Rises"
+movie.year_released = "2012"
+movie.rated = "PG-13"
+movie.person_id = "Christopher Nolan"
+movie.save
+
+puts movie.all.count
 
 ## INSERT ROLE
 #Batman Begins
@@ -325,6 +328,8 @@ puts ""
 
 # Query the movies data and loop through the results to display the movies output
 
+movies = Movies.where({person_id:"Christopher Nolan"})
+puts Movies.inspect
 
 # Prints a header for the cast output
 puts ""
@@ -333,3 +338,8 @@ puts "========"
 puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie
+
+cast = roles.where({movie_id:"Batman Begins"})
+cast = roles.where({movie_id:"The Dark Knight"})
+cast = roles.where({movie_id:"The Dark Knight Rises"})
+puts roles.inspect
