@@ -102,9 +102,9 @@ puts ""
 # Delete existing data, so you'll start fresh each time this script is run.
 # Use `Model.destroy_all` code.
 
-People.destroy_all
-Movies.destroy_all
-Roles.destroy_all
+people.destroy_all
+movies.destroy_all
+roles.destroy_all
 
 # Generate models and tables, according to the domain model
 #rails generate model People
@@ -151,7 +151,53 @@ Roles.destroy_all
 # Insert data into your database that reflects the sample data shown above
 # Do not use hard-coded foreign key IDs.
 
+puts people.all.count
 
+people = people.new
+people.name = "Christian Bale"
+people.save
+
+people = people.new
+people.name = "Michael Caine"
+people.save
+
+people = people.new
+people.name = "Liam Neeson"
+people.save
+
+people = people.new
+people.name = "Katie Holmes"
+people.save
+
+people = people.new
+people.name = "Gary Oldman"
+people.save
+
+people = people.new
+people.name = "Heath Ledger"
+people.save
+
+people = people.new
+people.name = "Aaron Eckhart"
+people.save
+
+people = people.new
+people.name = "Maggie Gyllenhaal"
+people.save
+
+people = people.new
+people.name = "Tom Hardy"
+people.save
+
+people = people.new
+people.name = "Joseph Gordon-Levitt"
+people.save
+
+people = people.new
+people.name = "Anne Hathaway"
+people.save
+
+puts people.all.count
 
 # Prints a header for the movies output
 puts "Movies"
