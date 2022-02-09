@@ -93,3 +93,78 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie
 # TODO!
+
+
+
+
+# SOLUTION
+
+# Delete existing data, so you'll start fresh each time this script is run.
+# Use `Model.destroy_all` code.
+
+People.destroy_all
+Movies.destroy_all
+Roles.destroy_all
+
+# Generate models and tables, according to the domain model
+#rails generate model People
+#rails generate model Movies
+#rails generate model Role
+
+#class CreateRoles < ActiveRecord::Migration[7.0]
+#def change
+    #create_table :roles do |t|
+     # t.string :movie_id
+     # t.string :person_id
+     # t.string :character_name
+
+     # t.timestamps
+  #  end
+ # end
+#end
+
+#class CreateMovies < ActiveRecord::Migration[7.0]
+  #  def change
+      #create_table :movies do |t|
+      #  t.string :title
+      #  t.string :year_released
+      #  t.string :rated
+      #  t.string :person_id
+  
+      #  t.timestamps
+   #   end
+  #  end
+  #end
+  
+ # class CreatePeople < ActiveRecord::Migration[7.0]
+  #  def change
+  #    create_table :people do |t|
+   #     t.string :name
+  
+   #     t.timestamps
+  #    end
+  #  end
+  #end
+
+# rails db:migrate
+
+# Insert data into your database that reflects the sample data shown above
+# Do not use hard-coded foreign key IDs.
+
+
+
+# Prints a header for the movies output
+puts "Movies"
+puts "======"
+puts ""
+
+# Query the movies data and loop through the results to display the movies output
+
+
+# Prints a header for the cast output
+puts ""
+puts "Top Cast"
+puts "========"
+puts ""
+
+# Query the cast data and loop through the results to display the cast output for each movie
