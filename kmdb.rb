@@ -151,6 +151,7 @@ roles.destroy_all
 # Insert data into your database that reflects the sample data shown above
 # Do not use hard-coded foreign key IDs.
 
+## INSET PEOPLE
 puts people.all.count
 
 people = people.new
@@ -198,6 +199,32 @@ people.name = "Anne Hathaway"
 people.save
 
 puts people.all.count
+
+## INSERT MOVIES
+
+movies = movies.new
+movies.title = "Batman Begins"
+movies.year_released = "2005"
+movies.rated = "PG-13"
+movies.person_id = "Christopher Nolan"
+movies.save
+
+movies = movies.new
+movies.title = "The Dark Knight"
+movies.year_released = "2008"
+movies.rated = "PG-13"
+movies.person_id = "Christopher Nolan"
+movies.save
+
+movies = movies.new
+movies.title = "The Dark Knight Rises"
+movies.year_released = "2012"
+movies.rated = "PG-13"
+movies.person_id = "Christopher Nolan"
+movies.save
+
+## INSERT ROLE
+
 
 # Prints a header for the movies output
 puts "Movies"
