@@ -197,9 +197,7 @@ person = Person.new
 person.name = "Anne Hathaway"
 person.save
 
-
 ## INSERT MOVIES
-#puts Movie.all.count
 
 movie = Movie.new
 movie.title = "Batman Begins"
@@ -322,9 +320,11 @@ puts "======"
 puts ""
 
 # Query the movies data and loop through the results to display the movies output
-
-#p "#{movie.title} #{movie.year_released} #{movie.rated} #{movie.person_id}"
-
+movie = Movie.all
+for movie in movie
+    person = Person.where(id: movie.person_id)[0]
+        puts "#{movie.title} #{movie.year_released} #{movie.rated} #{person_id}"
+end
 
 # Prints a header for the cast output
 puts ""
@@ -333,8 +333,9 @@ puts "========"
 puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie
-
-#cast = roles.where({movie_id:"Batman Begins"})
-##cast = roles.where({movie_id:"The Dark Knight"})
-#cast = roles.where({movie_id:"The Dark Knight Rises"})
-#puts roles.inspect
+role = Role.all
+for role in role
+    movie = Movie.where(id:role.movie_id)[0]
+    person = Person.where(id:role.person_id)[0]
+    puts "#{movie.title} #{person_name} #{role.character_name}"
+end
